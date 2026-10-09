@@ -4,11 +4,5 @@
   "question": "Query the GraphQL API for other users' private information, including their API keys (insecure direct object reference).",
   "category": "WEB",
   "difficulty": 2,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "graphql",
-    "idor",
-    "access-control",
-    "api"
-  ]
+  "evidence_kind": "SECRET"
 }
