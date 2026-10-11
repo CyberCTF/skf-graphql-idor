@@ -3,6 +3,7 @@
 # - pip installs requirements.txt with constraints.txt, which pins the unpinned packages to their
 #   versions of 2022-02-07 (upstream's install fails today: Flask-Migrate pulls alembic>=1.9, which
 #   needs a newer Python than the image's 3.6).
+# - it creates /ctf owned by the lab user, for the per-player flag.
 
 ### Static layers
 
@@ -36,6 +37,9 @@ WORKDIR /home/app/graphql-IDOR
 
 RUN chown -R app:app /home/app/graphql-IDOR
 # Switching to the limited user
+# Overlay: the flag folder /ctf, owned by the lab user so the flag init (which runs as that user) can write it.
+RUN mkdir -p /ctf && chown app:app /ctf
+
 USER app
 
 # Installing needed binaries and deps
