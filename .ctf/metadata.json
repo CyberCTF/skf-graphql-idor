@@ -1,8 +1,11 @@
 {
+  "project_name": "cyberlabs-skf-graphql-idor",
+  "slug": "skf-graphql-idor",
   "title": "OWASP SKF GraphQL IDOR",
   "description": "A Flask blog with a login (johndoe/password1) and a GraphQL API at /graphql whose singleUser query returns a user's personal data and API key for any id.",
-  "question": "Query the GraphQL API for other users' private information (IDOR; login johndoe/password1). The flag is in /ctf/flag.",
-  "category": "WEB",
+  "category": "web",
   "difficulty": 2,
-  "evidence_kind": "SECRET"
+  "evidence_kind": "SECRET",
+  "capabilities": [],
+  "question": "Query the GraphQL API for other users' private information (IDOR; login johndoe/password1). The flag is in /ctf/flag."
 }
